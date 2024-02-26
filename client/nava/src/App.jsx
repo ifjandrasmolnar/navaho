@@ -9,9 +9,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/test");
+        const res = await fetch("http://localhost:5000/api/data");
         const data = await res.json();
-        console.log(data.message);
+        console.log(data);
       } catch (err) {
         console.log(err);
       }
