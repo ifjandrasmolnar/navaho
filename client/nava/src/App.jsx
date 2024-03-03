@@ -1,59 +1,76 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
-import Navbar from "./components/NavbarComponent";
-import DesktopMainTable from "./components/DesktopMainTable";
-import MobileMainTable from "./components/MobileMainTable";
+import Navbar from "./components/responsive/Navbar";
+import Navbar2 from "./components/responsive/Navbar2";
 import SearchComponent from "./components/SearchComponent";
+import MainComponent from "./components/MainComponent";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
-  const [isMobileView, setIsMobileView] = React.useState(false);
+  const [jsonData, setJsonData] = useState(null);
+  const [error, setError] = useState(null);
+  const [isMobileView, setIsMobileView] = useState(false);
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await fetch("/api/data");
+        if (!res.ok) {
+          throw new Error("Failed to fetch data");
+        }
         const data = await res.json();
-        console.log(data);
+        const jsonData = JSON.parse(data);
+        setJsonData(jsonData);
       } catch (err) {
-        console.log(err);
+        setError(err.message);
       }
     };
     fetchData();
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
-      // Check screen size and set the state accordingly
-      setIsMobileView(window.innerWidth <= 800);
+      setIsMobileView(window.innerWidth <= 725 ? true : false);
     };
+
     handleResize();
 
     window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [window.innerWidth]);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const handleSearch = (query) => {
+  const handleSearch = (query, selectedCategory) => {
     setSearchQuery(query);
   };
 
+  const handleDataUpdate = (updatedData) => {
+    setJsonData(updatedData);
+  };
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <>
-      <Navbar />
-      <div>
-        <h1>HELLOOO </h1>
+      {isMobileView ? <Navbar2 /> : <Navbar />}
+      <div style={{ marginTop: "20px" }}>
+        {!isMobileView ? (
+          <SearchComponent
+            placeholder={"Keresés . . ."}
+            onSearch={handleSearch}
+          />
+        ) : undefined}
       </div>
-      <div style={{ marginTop: "40px" }}>
-        <SearchComponent
-          placeholder={"Keresés . . ."}
-          onSearch={handleSearch}
-        />
-      </div>
-      <div>{isMobileView ? <MobileMainTable /> : <DesktopMainTable />}</div>
+      {!jsonData ? (
+        <div>Loading...</div>
+      ) : (
+        <MainComponent jsonData={jsonData} />
+      )}
     </>
   );
 }
