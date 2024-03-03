@@ -4,8 +4,8 @@ Ez a projekt egy reszponzív 1 oldalas weboldalt készít, mely a Magyar Televí
 A weboldal egy Express szerveren fut, a kliens oldali rész pedig React-ot használ, melyet Vite segítségével hoztam létre.
 Emellett MUI (Material-UI) keretrendszert, Swal (SweetAlert) üzenetmegjelenítőt és MUI Tool-tip-et használtam.
 
-Figma design link:
-https://www.figma.com/file/fLesHgpyGFF8tLrMtvUBvb/NAVA-L%C3%B6HomeWork?type=design&node-id=0%3A1&mode=design&t=qplwdSRBitGyhGjp-1
+- **Figma design link:**
+- https://www.figma.com/file/fLesHgpyGFF8tLrMtvUBvb/NAVA-L%C3%B6HomeWork?type=design&node-id=0%3A1&mode=design&t=qplwdSRBitGyhGjp-1
 
 ## Telepítés és Futtatás
 
