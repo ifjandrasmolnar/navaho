@@ -24,7 +24,7 @@ function SearchComponent({ placeholder, onSearch }) {
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "0 auto" }}>
+    <div style={{ maxWidth: "500px", margin: "0 auto", height: "6vh" }}>
       <Container>
         <InputGroup className="mb-3">
           {/* Category Selector Dropdown */}
