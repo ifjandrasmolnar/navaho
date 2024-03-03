@@ -15,20 +15,20 @@ https://www.figma.com/file/fLesHgpyGFF8tLrMtvUBvb/NAVA-L%C3%B6HomeWork?type=desi
 
 2. **Projekt Klónozása:**
 
-   git clone https://github.com/ifjandrasmolnar/navaho
-   cd navaho
+   - git clone https://github.com/ifjandrasmolnar/navaho
+   - cd navaho
    
 3. **Futtatás Fejlesztői Módban:**
-   cd cliens/nava
-   npm install
-   npm run dev
+   - cd cliens/nava
+   - npm install
+   - npm run dev
 
    => http://localhost:5173 fut a cliens
 
 4. **Szerver Indítása:**
-   cd server
-   npm install
-   npm run nodemon
+   - cd server
+   - npm install
+   - npm run nodemon
 
    => http://localhost:5000 fut a server
  
