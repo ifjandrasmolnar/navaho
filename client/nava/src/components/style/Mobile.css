@@ -1,0 +1,258 @@
+.mdiv {
+  max-width: 500px;
+  justify-content: center;
+  border-radius: 10px;
+  border-top: 0.5px solid #580763;
+  border-right: 0.5px solid #580763;
+  border-bottom: 3px solid #580763;
+  border-left: 0.5px solid #580763;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  padding: 13px 15px;
+  max-width: 600px;
+}
+.mdiv-2 {
+  justify-content: space-between;
+}
+
+.mdiv-3 {
+  gap: 0px;
+  display: flex;
+}
+
+.mcolumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  margin-left: 0px;
+}
+@media (max-width: 991px) {
+  .mcolumn {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .mcolumn {
+    width: 100%;
+  }
+}
+.mdiv-4 {
+  justify-content: space-between;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 0 52px;
+}
+@media (max-width: 991px) {
+  .mdiv-4 {
+    margin-top: 25px;
+    padding: 0 20px;
+  }
+}
+.mdiv-5 {
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 0.8px solid #77277c;
+  box-shadow: 0px 3.2px 3.2px 0px rgba(0, 0, 0, 0.25);
+  background-color: #c293c5;
+  display: flex;
+  padding: 0 17px;
+  transition: 0.3s;
+}
+.mdiv-5:hover {
+  transform: scale(1.25);
+}
+.mdiv-5:active {
+  transform: scale(1.25);
+}
+@media (max-width: 991px) {
+  .mdiv-5 {
+    padding-right: 20px;
+  }
+}
+.mimg {
+  aspect-ratio: 0.63;
+  object-fit: auto;
+  object-position: center;
+  width: 56px;
+}
+.mdiv-6 {
+  justify-content: center;
+  display: flex;
+  margin-top: 13px;
+  flex-direction: column;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  padding: 0 6px;
+}
+@media (max-width: 991px) {
+  .mdiv-6 {
+    white-space: initial;
+  }
+}
+.mdiv-7 {
+  font-family: Inter, sans-serif;
+  justify-content: center;
+  border-radius: 5px;
+  border: 0.722px solid #580763;
+  box-shadow: 0px 1.925px 1.925px 0px rgba(0, 0, 0, 0.25);
+  background-color: #8d5193;
+  padding: 4px 7px;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .mdiv-7 {
+    white-space: initial;
+  }
+}
+.mdiv-8 {
+  font-family: Inter, sans-serif;
+  justify-content: center;
+  border-radius: 5px;
+  border: 0.722px solid #8d5193;
+  box-shadow: 0px 1.925px 1.925px 0px rgba(0, 0, 0, 0.25);
+  background-color: #8d5193;
+  margin-top: 5px;
+  padding: 4px 7px;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .mdiv-8 {
+    white-space: initial;
+  }
+}
+.mcolumn-2 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+}
+
+.mdiv-9 {
+  justify-content: center;
+  align-self: stretch;
+  border-radius: 10px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  font-size: 12px;
+  color: #000;
+  padding: 6px 10px;
+}
+@media (max-width: 991px) {
+  .mdiv-9 {
+    margin-top: 25px;
+  }
+}
+.mdiv-10 {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  white-space: nowrap;
+}
+@media (max-width: 991px) {
+  .mdiv-10 {
+    white-space: initial;
+  }
+}
+.mdiv-11 {
+  align-self: start;
+  font-feature-settings: "cpsp" on;
+  font-family: Inter, sans-serif;
+  font-style: italic;
+}
+.mdiv-11 > span,
+.mdiv-14 > span,
+.mdiv-17 > span,
+.mdiv-20 > span,
+.mdiv-23 > span,
+.mdiv-26 > span {
+  font-weight: 600;
+}
+
+.mdiv-12 {
+  font-feature-settings: "cpsp" on;
+  font-family: Inter, sans-serif;
+}
+.mdiv-13 {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+  gap: 15px;
+}
+.mdiv-14 {
+  font-family: Inter, sans-serif;
+  font-style: italic;
+}
+.mdiv-15 {
+  font-family: Inter, sans-serif;
+}
+.mdiv-16 {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+  gap: 13px;
+}
+.mdiv-17 {
+  font-family: Inter, sans-serif;
+  font-style: italic;
+}
+.mdiv-18 {
+  font-family: Inter, sans-serif;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.mdiv-19 {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.mdiv-20 {
+  font-family: Inter, sans-serif;
+  font-style: italic;
+}
+.mdiv-21 {
+  font-family: Inter, sans-serif;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.mdiv-22 {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+  gap: 15px;
+}
+.mdiv-23 {
+  font-family: Inter, sans-serif;
+  font-style: italic;
+}
+.mdiv-24 {
+  font-family: Inter, sans-serif;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.mdiv-25 {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+  gap: 20px;
+}
+.mdiv-26 {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-style: italic;
+}
+.mdiv-27 {
+  font-family: Inter, sans-serif;
+  flex-grow: 1;
+  flex-basis: auto;
+}
